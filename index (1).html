@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panasuna Chits (P) Ltd. | Start your saving here</title>
+<link rel="stylesheet" href="https://db.onlinewebfonts.com/c/04e6981992c0e2e7642af2074ebe3901?family=Helvetica+Now+Display+Bold">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--font-heading:'Helvetica Now Display Bold','Helvetica Neue',Arial,sans-serif;--font-body:'Inter',system-ui,sans-serif;--text:#192837;--accent:#7342E2;--bg:#F2F2EE;--glass:rgba(242,242,238,.66);--line:rgba(25,40,55,.12)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--font-body);color:var(--text);line-height:1.6;background:#cfc8c5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:#cfc8c5 url(poster.jpg) center/cover no-repeat}
+.bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;pointer-events:none}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(242,242,238,0) 0%,rgba(242,242,238,.10) 55%,rgba(242,242,238,.26) 100%);transition:opacity .6s ease}
+h1,h2,h3{font-family:var(--font-heading);font-weight:400;letter-spacing:-.01em;line-height:1.08}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,32px)}
+section{padding:clamp(56px,9vw,104px) 0}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h2{font-size:clamp(1.65rem,4.2vw,2.75rem);margin-bottom:14px}
+.lead{max-width:600px;opacity:.82;margin-bottom:36px}
+.glass{background:var(--glass);backdrop-filter:blur(22px) saturate(1.35);-webkit-backdrop-filter:blur(22px) saturate(1.35);border:1px solid rgba(255,255,255,.6);border-radius:24px;box-shadow:0 8px 40px rgba(25,40,55,.10),inset 0 1px 0 rgba(255,255,255,.75)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:12px 24px;border-radius:50px;border:0;font:600 .95rem var(--font-body);cursor:pointer;text-decoration:none;transition:transform .25s cubic-bezier(.22,1,.36,1),filter .25s;color:var(--text);background:var(--bg)}
+.btn.p{background:var(--accent);color:#fff;box-shadow:0 4px 24px rgba(115,66,226,.28)}
+.btn:hover{transform:scale(1.04);filter:brightness(1.06)}.btn:active{transform:scale(.96)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;padding:14px 0}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 20px;border-radius:50px}
+.brand{display:flex;align-items:center;gap:10px;font:400 1.05rem var(--font-heading);color:var(--text);text-decoration:none}
+.brand i{width:32px;height:32px;border-radius:10px;background:var(--text);display:grid;place-items:center}
+.links{display:flex;gap:26px}.links a{font-size:.9rem;font-weight:500;color:var(--text);text-decoration:none;opacity:.85;transition:opacity .2s}.links a:hover{opacity:.5}
+.cta{display:flex;gap:8px}.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--text)}
+@media(max-width:900px){.links,.cta{display:none}.burger{display:block}.menu.open{display:flex}}
+.menu{display:none;flex-direction:column;gap:4px;margin-top:8px;padding:16px;border-radius:24px}
+.menu a{padding:12px;color:var(--text);text-decoration:none;font-weight:500}
+@media(min-width:901px){.menu{display:none!important}}
+/* hero */
+.hero{min-height:calc(100svh - 80px);display:flex;align-items:center;padding-top:clamp(40px,8vw,72px)}
+.hero h1{font-size:clamp(2.1rem,6.4vw,4.4rem);margin-bottom:24px;max-width:780px}
+.hero p{font-size:clamp(.95rem,2.5vw,1.15rem);opacity:.82;max-width:560px;margin-bottom:32px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.chip{padding:12px 18px;border-radius:50px;font-size:.88rem;font-weight:600}
+/* grids */
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{padding:28px;transition:transform .3s cubic-bezier(.22,1,.36,1)}.card:hover{transform:translateY(-4px)}
+.card h3{font-size:1.25rem;margin:14px 0 8px}.card p{font-size:.94rem;opacity:.82}
+.ico{width:44px;height:44px;border-radius:14px;background:var(--accent);color:#fff;display:grid;place-items:center}
+/* plans */
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;align-items:center}
+.tools button,.tools select,.tools input{min-height:44px;padding:0 18px;border-radius:50px;border:1px solid var(--line);background:var(--glass);font:500 .88rem var(--font-body);color:var(--text);cursor:pointer}
+.tools button[aria-pressed=true]{background:var(--text);color:#fff}.tools input{cursor:text;width:150px}
+.plan{padding:24px}.plan small{opacity:.65;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.plan b{display:block;font:400 1.9rem var(--font-heading);margin:2px 0 12px}
+.plan div{display:flex;justify-content:space-between;font-size:.9rem;padding:8px 0;border-top:1px solid var(--line)}
+.plan .btn{width:100%;margin-top:14px}
+/* team */
+.team{display:grid;grid-template-columns:260px 1fr;gap:20px}
+@media(max-width:800px){.team{grid-template-columns:1fr}}
+.tabs{display:flex;flex-direction:column;gap:8px;padding:12px}@media(max-width:800px){.tabs{flex-direction:row;overflow-x:auto}}
+.tab{min-height:44px;padding:0 16px;border:0;border-radius:16px;background:transparent;text-align:left;font:600 .9rem var(--font-body);color:var(--text);cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--text);color:#fff}
+.panel{padding:clamp(24px,4vw,40px)}.panel h3{font-size:1.7rem}.panel em{display:block;color:var(--accent);font-style:normal;font-weight:700;margin:6px 0 16px}
+/* accordion */
+details{padding:0 24px;margin-bottom:12px}summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;font:400 1.15rem var(--font-heading)}
+summary::after{content:"+";font:300 1.6rem var(--font-body);color:var(--accent);transition:transform .3s}details[open] summary::after{transform:rotate(45deg)}
+details p{padding-bottom:20px;opacity:.85;max-width:760px}
+.quote{padding:clamp(28px,5vw,56px);text-align:center}.quote q{display:block;font:400 clamp(1.4rem,3.6vw,2.4rem)/1.2 var(--font-heading);max-width:860px;margin:0 auto 16px;quotes:none}
+.names{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}.names span{padding:8px 14px;border-radius:50px;background:rgba(255,255,255,.6);font-size:.8rem;font-weight:500}
+.contact{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}@media(max-width:800px){.contact{grid-template-columns:1fr}}
+.contact .glass{padding:clamp(24px,4vw,40px)}.contact dt{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-top:18px}.contact dd{margin:2px 0}
+.big{font:400 clamp(1.8rem,4vw,2.6rem) var(--font-heading);color:var(--accent);text-decoration:none}
+footer{padding:28px 0;text-align:center;font-size:.82rem;opacity:.7}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+/* ---- polish layer ---- */
+h1,h2{text-wrap:balance}p{text-wrap:pretty}
+.hero .wrap{width:100%}.hero h1{letter-spacing:-.025em}
+.eyebrow{display:flex;align-items:center;gap:10px}.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--accent)}
+.contact .eyebrow,.quote .eyebrow{justify-content:center}.contact .glass .eyebrow{justify-content:flex-start}
+.btn.p{background:linear-gradient(135deg,#8454ee,#6431d6)}
+.btn{transition:transform .25s cubic-bezier(.22,1,.36,1),filter .25s,box-shadow .25s}.btn.p:hover{box-shadow:0 8px 32px rgba(115,66,226,.42)}
+.ico{background:linear-gradient(135deg,#8a5cf0,#5b2fcf);box-shadow:0 6px 18px rgba(115,66,226,.35)}
+.card{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}.card:hover{box-shadow:0 18px 56px rgba(25,40,55,.16),inset 0 1px 0 rgba(255,255,255,.8)}
+.chip{display:inline-flex;align-items:center;gap:10px}.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(115,66,226,.18)}
+.bar{transition:box-shadow .3s,background .3s}nav.scrolled .bar{box-shadow:0 14px 48px rgba(25,40,55,.18);background:rgba(242,242,238,.8)}
+.links a{position:relative}.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.22,1,.36,1)}.links a:hover::after{transform:scaleX(1)}
+details{transition:box-shadow .3s}details:hover{box-shadow:0 12px 44px rgba(25,40,55,.14),inset 0 1px 0 rgba(255,255,255,.75)}
+.hero .wrap>.rv:nth-child(1){transition-delay:.05s}.hero .wrap>.rv:nth-child(2){transition-delay:.15s}.hero .wrap>.rv:nth-child(3){transition-delay:.25s}.hero .wrap>.rv:nth-child(4){transition-delay:.35s}
+@media(max-width:700px){.bg::after{background:linear-gradient(180deg,rgba(242,242,238,.5),rgba(242,242,238,.3))}.bg video{object-position:70% 50%}}
+/* ---- hold left click: fade the page away so the video shows fully ---- */
+nav,main,footer{transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1),filter .55s}
+body.peek nav,body.peek main,body.peek footer{opacity:0;transform:scale(.985);filter:blur(10px);pointer-events:none}
+body.peek{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:grabbing}
+body.peek .bg::after{opacity:0}
+.hint{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));z-index:40;transform:translate(-50%,12px);padding:10px 18px;border-radius:50px;font-size:.84rem;font-weight:600;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s cubic-bezier(.22,1,.36,1);white-space:nowrap}
+.hint.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="bg"><video id="bgv" autoplay muted loop playsinline preload="auto" poster="poster.jpg" disablepictureinpicture aria-hidden="true"><source src="bg.mp4" type="video/mp4"></video></div>
+
+<nav><div class="wrap"><div class="bar glass">
+<a class="brand" href="#top"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="#F2F2EE"><path d="M3 18 2 6l5 5 5-8 5 8 5-5-1 12z"/></svg></i>Panasuna Chits</a>
+<div class="links"><a href="#about">About</a><a href="#why">Why Us</a><a href="#plans">Chit Plans</a><a href="#team">Our Team</a><a href="#learn">Chit Funds</a><a href="#contact">Contact</a></div>
+<div class="cta"><a class="btn" href="https://panasunachits.com/works/login.php">Login</a></div>
+<button class="burger" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+<div class="menu glass"><a href="#about">About</a><a href="#why">Why Us</a><a href="#plans">Chit Plans</a><a href="#team">Our Team</a><a href="#learn">Chit Funds</a><a href="#contact">Contact</a><a href="https://panasunachits.com/works/login.php">Login</a></div></div></nav>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<h1 class="rv">Start your saving here!</h1>
+<p class="rv">Spend what is left after saving. Join Panasuna to make your dreams come true, with a security deposit equal to 100% of chit value held as FDR in a scheduled bank.</p>
+<div class="rv"><a class="btn p" href="#plans" style="min-width:210px;justify-content:space-between;gap:32px">Explore Chit Plans <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-3-3 3 3-3 3"/></svg></a></div>
+<div class="chips rv"><span class="chip glass">100% FDR security</span><span class="chip glass">Door-to-door collection</span><span class="chip glass">Daily to monthly installments</span></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<p class="eyebrow">About Us</p><h2>Stable and prudent, a pioneer in chit funds.</h2>
+<p class="lead">Managed by a Board of Directors, Panasuna Chits (P) Ltd. has contributed in no small measure to the growth of the industry.</p>
+<div class="g3">
+<div class="card glass rv"><h3>Our Values</h3><p>Our product aims at delivering value to the customer. No matter his economic status, everyone is entitled to courtesy, prompt service and high levels of transparency.</p></div>
+<div class="card glass rv"><h3>The Vision</h3><p>To become a leading player in the chit funds sector, catering to the requirements of the mass market.</p></div>
+<div class="card glass rv"><h3>The Mission</h3><p>To bring convenience to the lives of the ordinary people of India, to "make life easy" for them.</p></div>
+</div></div></section>
+
+<section id="why"><div class="wrap">
+<p class="eyebrow">Why Us</p><h2>Why Panasuna is awesome</h2>
+<div class="g3" id="whyGrid"></div></div></section>
+
+<section id="plans"><div class="wrap">
+<p class="eyebrow">Chit Plans</p><h2>Pick a plan that fits your goal</h2>
+<div class="tools" role="group" aria-label="Filter plans">
+<button data-f="all" aria-pressed="true">All</button><button data-f="lo" aria-pressed="false">Under 2,00,000</button><button data-f="mid" aria-pressed="false">2,00,000 to 5,00,000</button><button data-f="hi" aria-pressed="false">Above 5,00,000</button>
+<select id="sort" aria-label="Sort plans"><option value="0a">Chit value: low to high</option><option value="0d">Chit value: high to low</option><option value="1a">Months: short to long</option><option value="2a">Instalment: low to high</option></select>
+<input id="find" type="search" placeholder="Find value" aria-label="Find a plan by value"></div>
+<div class="g3" id="planGrid"></div></div></section>
+
+<section id="team"><div class="wrap">
+<p class="eyebrow">Our Team</p><h2>People behind your savings</h2>
+<div class="team"><div class="tabs glass" role="tablist" id="tabs"></div><div class="panel glass" id="panel" role="tabpanel"></div></div></div></section>
+
+<section id="learn"><div class="wrap">
+<p class="eyebrow">About Chit Funds</p><h2>Why chits beat other options</h2>
+<p class="lead">A chit fund is a savings scheme practised in India for centuries. It is easy to join, allows small deposits and works as a borrowing cum savings instrument.</p>
+<div id="acc"></div></div></section>
+
+<section><div class="wrap"><div class="quote glass rv">
+<q>Do not save what is left after spending, but spend what is left after saving.</q><p class="eyebrow" style="margin:0">Warren Buffett</p>
+<div class="names" id="names"></div>
+<p style="margin-top:20px;max-width:620px;margin-inline:auto;opacity:.82">"We are very happy and satisfied with service. It was able to create a vast fan base within very short period of time. We would highly recommend to anyone."</p></div></div></section>
+
+<section id="contact"><div class="wrap"><p class="eyebrow">Contact Us</p><h2>We are here to help you</h2>
+<div class="contact"><div class="glass"><dl>
+<dt>Address</dt><dd>419/151-A (upstairs) Chinna Kadai Street, Salem - 636 001.</dd>
+<dt>Phone</dt><dd>0427-2260611 / 2262411</dd><dt>Website</dt><dd>www.panasunachits.com</dd></dl></div>
+<div class="glass"><p class="eyebrow">Call us at</p><a class="big" href="tel:9842360611">9842360611</a><p style="margin:12px 0 24px;opacity:.82">Need saving advice? Talk to our chit advisors.</p><a class="btn p" href="tel:9842360611">Call for an Appointment</a></div></div></div></section>
+</main>
+<footer>&copy; Panasuna Chits (P) Ltd., Salem</footer>
+
+<div class="hint glass" id="hint" aria-hidden="true">Hold left click to see the full video</div>
+
+<script>
+const $=s=>document.querySelector(s),inr=n=>n.toLocaleString('en-IN');
+const P=[[100000,50,2000],[100000,40,2500],[100000,25,4000],[150000,30,5000],[150000,50,3000],[150000,20,7500],[1500000,50,30000],[200000,40,5000],[200000,25,8000],[200000,20,10000],[300000,50,6000],[300000,30,10000],[300000,25,12000],[500000,50,10000],[500000,25,20000],[600000,30,20000],[600000,60,10000],[900000,60,15000],[900000,30,30000],[1000000,40,25000],[1600000,40,40000],[2500000,50,50000],[5000000,50,100000],[7500000,60,125000],[10000000,50,200000],[10000000,20,500000]];
+const W=[["Trusted Advisor","Real time guidance to help you provision your resources by our best practices."],["Customized Solutions","We solve your problem, even when it needs an ad hoc solution."],["Flexible Installments","Choose daily, weekly, bi-weekly or monthly collection to suit you."],["Door to Door Collection","A dynamic, reliable collection team handles collection and payment at your doorstep."],["Friendly & Caring Staff","The growth of our clients is the growth of Panasuna."],["Timely Payment to Clients","We use technology for timely payments and honour your faith."]];
+const T=[["R. Viswanathan","Managing Director","A founder member who has been through every up and down of the chit fund industry. Past president of Salem Chit Funds & Financiers Association and past treasurer of T.N.C.F.A."],["K. Mohanasundaram","Legal","An advocate who brought his legal knowledge into the family business and ensures every activity stays compliant. Legal advisor to Salem Chit Funds & Finance Association."],["K. Karunanithy","Director","The backbone of the company. He began his career here and meets customer needs through varied chit plans. Executive committee member of Salem Chit Funds & Fin. Assn."],["M. Karthish","Director","Left investment banking for an MBA and a law degree. Educates young people on chit funds; Finance committee member for TN in AIACF, JS of TNCFCA and executive member of SCFFA."],["K. Harish","Director","Master's in Business Management from Ireland and three years as a Financial Analyst there. Raises awareness of Registered Chit Funds and heads Young Minds, a state-level youth body."]];
+const A=[["Chits vs Fixed Deposits","Banks pay about 7.5 to 9.5% and a fixed deposit is illiquid. A chit pays a competitive return as dividend, and you can use the funds for planned or unplanned expenses."],["Chits vs Recurring Deposits","Banks offer around 8.5%. With chits you can earn more than bank rates and borrow against the chit, which a recurring deposit does not allow."],["Chits vs Bank Loans","Banks charge 12 to 24% on personal loans. A chit means far less interest cost, paperwork and surety."],["Chits vs Stock Market","The stock market demands constant time, tracking and decisions. A chit is the less risky choice with no market watching."],["Chits vs Mutual Funds","A chit works like a SIP with no entry or exit load and much lower risk. Mutual fund value depends on market conditions."],["Chits vs Credit Cards","Revolving card balances can cost almost 40%. Follow Save, Borrow, Pay instead of Buy Now, Pay Later."]];
+const ic='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+$('#whyGrid').innerHTML=W.map(w=>`<div class="card glass rv"><span class="ico">${ic}</span><h3>${w[0]}</h3><p>${w[1]}</p></div>`).join('');
+$('#acc').innerHTML=A.map(a=>`<details class="glass"><summary>${a[0]}</summary><p>${a[1]}</p></details>`).join('');
+$('#names').innerHTML=["Ravi Kumar, Kumbakonam Silver Shop","Anand, Arunggarai Amman Pipes","Bala, Thanga Maligai Jewellers","Vivek, Madhurambigai Enterprises","Mani, Sri Kannika Parameswari Store","Ashok Raja, Mahaalaxmi Ceramics","Vignesh s, Sai Durga Feeds & Foods","Sundar, Sundara Krishna Industries"].map(n=>`<span>${n}</span>`).join('');
+let f='all';
+function plans(){const q=$('#find').value.replace(/\D/g,''),[k,d]=[+$('#sort').value[0],$('#sort').value[1]==='d'?-1:1];
+$('#planGrid').innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>(f==='all'||(f==='lo'&&p[0]<200000)||(f==='mid'&&p[0]>=200000&&p[0]<=500000)||(f==='hi'&&p[0]>500000))&&(!q||String(p[0]).includes(q))).sort((a,b)=>(a[0][k]-b[0][k])*d).map(([p,i])=>`<div class="plan card glass"><small>Chit Value</small><b>&#8377;${inr(p[0])}</b><div><span>Duration</span><strong>${p[1]} months</strong></div><div><span>Monthly Instalment</span><strong>&#8377;${inr(p[2])}</strong></div></div>`).join('')||'<p>No plans match.</p>'}
+document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{f=b.dataset.f;document.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===b));plans()});
+$('#sort').onchange=$('#find').oninput=plans;plans();
+function team(i){$('#tabs').innerHTML=T.map((t,j)=>`<button class="tab" role="tab" aria-selected="${j===i}" data-i="${j}">${t[0]}</button>`).join('');$('#panel').innerHTML=`<h3>${T[i][0]}</h3><em>${T[i][1]}</em><p>${T[i][2]}</p>`}
+team(0);$('#tabs').onclick=e=>{if(e.target.dataset.i)team(+e.target.dataset.i)};
+const bg=document.querySelector('.burger');bg.onclick=()=>{const o=document.querySelector('.menu').classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>document.querySelector('.menu').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+new MutationObserver(()=>document.querySelectorAll('.rv:not(.in)').forEach(n=>io.observe(n))).observe(document.body,{childList:true,subtree:true});
+document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+
+/* background video + hold-to-reveal */
+(()=>{
+const v=$('#bgv'),hint=$('#hint'),body=document.body;
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const play=()=>{const p=v.play();if(p&&p.catch)p.catch(()=>{})};
+if(calm){v.pause()}else{play();v.addEventListener('loadeddata',play);document.addEventListener('visibilitychange',()=>{if(!document.hidden)play()});addEventListener('pointerdown',play,{once:true})}
+const nav=document.querySelector('nav');const sc=()=>nav.classList.toggle('scrolled',scrollY>12);addEventListener('scroll',sc,{passive:true});sc();
+const IDLE='Hold left click to see the full video',SKIP='a,button,input,select,textarea,summary,label,dialog,[role=tab],.menu,.tools';
+let timer=null,on=false,sx=0,sy=0,used=false;
+function peek(s){if(s===on)return;on=s;body.classList.toggle('peek',s);if(s){used=true;try{getSelection().removeAllRanges()}catch(_){}hint.textContent='Release to return';hint.classList.add('show')}else{hint.classList.remove('show');setTimeout(()=>{hint.textContent=IDLE},400)}}
+document.addEventListener('pointerdown',e=>{
+ if(e.pointerType==='mouse'&&e.button!==0)return;
+ if(dlg.open||e.target.closest(SKIP))return;
+ sx=e.clientX;sy=e.clientY;clearTimeout(timer);timer=setTimeout(()=>peek(true),e.pointerType==='mouse'?160:420)});
+document.addEventListener('pointermove',e=>{if(timer&&!on&&e.pointerType!=='mouse'&&Math.hypot(e.clientX-sx,e.clientY-sy)>10){clearTimeout(timer);timer=null}});
+const end=()=>{clearTimeout(timer);timer=null;peek(false)};
+['pointerup','pointercancel','blur'].forEach(n=>addEventListener(n,end));
+document.documentElement.addEventListener('mouseleave',end);
+document.addEventListener('contextmenu',e=>{if(on)e.preventDefault()});
+document.addEventListener('dragstart',e=>{if(on||timer)e.preventDefault()});
+/* keyboard alternative: hold V */
+document.addEventListener('keydown',e=>{if(e.key.toLowerCase()!=='v'||e.repeat||e.ctrlKey||e.metaKey||e.altKey||dlg.open||e.target.closest('input,textarea,select'))return;peek(true)});
+document.addEventListener('keyup',e=>{if(e.key.toLowerCase()==='v')peek(false)});
+/* one-time gentle hint */
+setTimeout(()=>{if(!used){hint.classList.add('show');setTimeout(()=>{if(!on)hint.classList.remove('show')},6000)}},1600);
+})();
+</script>
+</body>
+</html>
